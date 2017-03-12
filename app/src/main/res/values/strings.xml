@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Locale Information</string>
+    <string name="title_locale">Locale</string>
+    <string name="title_language">Language</string>
+    <string name="title_country">Country</string>
+    <string name="title_display_country">Display Country</string>
+    <string name="title_display_language">Display Language</string>
+    <string name="title_display_name">Display Name</string>
+    <string name="title_display_script">Display Script</string>
+    <string name="title_display_variant">Display Variant</string>
+    <string name="title_iso3_country">ISO3 Country</string>
+    <string name="title_iso3_language">ISO3 Language</string>
+</resources>

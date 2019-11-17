@@ -43,6 +43,6 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             items.add(new LocaleInfo(R.string.title_display_script, Locale.getDefault().getDisplayScript()));
         }
-        return new LocaleRecyclerAdapter(this, items);
+        return new LocaleRecyclerAdapter(items);
     }
 }

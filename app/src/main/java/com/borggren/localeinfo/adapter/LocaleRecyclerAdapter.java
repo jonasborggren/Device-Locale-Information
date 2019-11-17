@@ -18,11 +18,9 @@ import java.util.List;
 
 public class LocaleRecyclerAdapter extends RecyclerView.Adapter<LocaleRecyclerAdapter.LocaleViewHolder> {
 
-    private final Context mContext;
     private final List<LocaleInfo> mLocaleInfoList;
 
-    public LocaleRecyclerAdapter(Context context, List<LocaleInfo> localeInfoList) {
-        mContext = context;
+    public LocaleRecyclerAdapter(List<LocaleInfo> localeInfoList) {
         mLocaleInfoList = localeInfoList;
     }
 
@@ -37,14 +35,17 @@ public class LocaleRecyclerAdapter extends RecyclerView.Adapter<LocaleRecyclerAd
 
     @Override
     public LocaleViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(android.R.layout.simple_list_item_2, parent, false);
+        Context context = parent.getContext();
+        int layoutRes = android.R.layout.simple_list_item_2;
+        View view = LayoutInflater.from().inflate(layouRes, parent, false);
         return new LocaleViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(LocaleViewHolder holder, int position) {
+        Context context = holder.itemView.getContext();
         LocaleInfo item = getItem(position);
-        holder.mTitleView.setText(item.getTitle(mContext));
+        holder.mTitleView.setText(item.getTitle(context));
         holder.mSubTitleView.setText(item.getSummary());
     }
 
